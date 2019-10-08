@@ -1,5 +1,5 @@
 # TFOPplanner
-Tools that assist with the selection of observable TESS Objects of Interest for ground based follow-up. 
+Tools that assist with the selection of observable TESS Objects of Interest for ground-based follow-up. 
 ___________________________________
 #### get_tois.py / get_k2ois.py
 Pulls data from exofop to generate a CSV of objects of interest that will be observable from a specified observatory within a specified time interval. CSV includes useful planning info, such as SG priority and previous observations of each object.
