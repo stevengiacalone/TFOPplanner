@@ -13,7 +13,7 @@ def is_daylight_savings(stop_date):
 	year = int(stop_date[:4])
 	month = int(stop_date[5:7])
 	day = int(stop_date[8:])
-	if (datetime(year, 3, 10) <= datetime(year, month, day) <= datetime(year, 10, 3)):
+	if (datetime(year, 3, 8) <= datetime(year, month, day) <= datetime(year, 11, 1)):
 		return True
 	else:
 		return False
