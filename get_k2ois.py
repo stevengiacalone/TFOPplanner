@@ -6,7 +6,6 @@ from datetime import datetime
 from astropy import units as u
 from astropy.time import Time
 from astropy.coordinates import SkyCoord, EarthLocation, AltAz
-from astroquery.mast import Catalogs
 from collections import OrderedDict
 
 def is_daylight_savings(stop_date):
@@ -131,6 +130,7 @@ def gen_target_list(site, obs_type, start_date, start_time, stop_date, stop_time
 			 ("stop time", np.array(df2["stop time"])),
 			 ("best time", np.array(df2["best time"])),
 			 ("best airmass", np.array(df2["best airmass"])),
+			 ("lowest zd", np.arccos(1/np.array(df2["best airmass"]))),
 			 ("Observed?", np.array(observed)),
 			 ("Telescope", np.array(telescope)),
 			 ("Instrument", np.array(instrument)),
